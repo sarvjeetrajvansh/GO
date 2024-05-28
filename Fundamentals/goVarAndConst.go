@@ -22,6 +22,11 @@ func tableGenerator(number int) {
 	for i := 1; i <= 10; i++ {
 		fmt.Println(number, "*", i, "=", number*i)
 	}
+	//  same as above with range
+	for t := range 11 {
+		fmt.Println(number, "*", t, "=", number*t)
+	}
+
 }
 
 func counterGenerator(number int) {
@@ -38,7 +43,7 @@ func main() {
 	fmt.Println(multiReturn(radius, radius)) // accept multiple return
 	_, result := multiReturn(radius, radius) // accept only one return
 	fmt.Println(result)
-	tableGenerator(1000)
-	tableGenerator(1000000000000000000) // output shows runtime rounding off towards -ve range
+	tableGenerator(5)
+	// output shows runtime rounding off towards -ve range
 	counterGenerator(10)
 }
