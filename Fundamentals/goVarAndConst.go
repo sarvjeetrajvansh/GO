@@ -35,6 +35,14 @@ func counterGenerator(number int) {
 	}
 }
 
+func ciCalculator(principal float64, rate float64, time int) {
+
+	amount := principal * math.Pow(1+rate/100, float64(time))
+
+	fmt.Printf("\nThe Amount will be Rs.%.2f after %d Years at rate of %.2f for principal of Rs.%.2f \n", amount, time, rate, principal)
+
+}
+
 func main() {
 	fmt.Println("Learning Const & Var")
 	ans := 2 * pi * math.Pow(float64(radius), 2) // short hand var declare & assign
@@ -46,4 +54,5 @@ func main() {
 	tableGenerator(5)
 	// output shows runtime rounding off towards -ve range
 	counterGenerator(10)
+	ciCalculator(1000000, 15, 20)
 }
