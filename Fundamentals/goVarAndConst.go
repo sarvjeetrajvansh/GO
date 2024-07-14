@@ -6,7 +6,6 @@ import (
 )
 
 const pi float64 = 2.17 // const type var, can be declare anywhere
-
 var radius int = 5
 
 func add(num1, num2 int) int {
@@ -35,12 +34,14 @@ func counterGenerator(number int) {
 	}
 }
 
-func ciCalculator(principal float64, rate float64, time int) {
+func ciCalculator(principal float64, rate float64, time float64) {
+	const inflationRate = 6.48
+	amount := principal * math.Pow(1+rate/100, time)
+	amountPostInflation := amount / math.Pow(1+inflationRate/100, time)
 
-	amount := principal * math.Pow(1+rate/100, float64(time))
+	fmt.Printf("\nThe Amount will be Rs.%.2f after %.2f Years at rate of %.2f for principal of Rs.%.2f \n", amount, time, rate, principal)
 
-	fmt.Printf("\nThe Amount will be Rs.%.2f after %d Years at rate of %.2f for principal of Rs.%.2f \n", amount, time, rate, principal)
-
+	fmt.Printf("Considering inflation, adusted value will be : Rs.%.2f", amountPostInflation)
 }
 
 func main() {
@@ -54,5 +55,5 @@ func main() {
 	tableGenerator(5)
 	// output shows runtime rounding off towards -ve range
 	counterGenerator(10)
-	ciCalculator(1000000, 15, 20)
+	ciCalculator(1000, 8.5, 10)
 }
