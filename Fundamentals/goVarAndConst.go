@@ -7,6 +7,7 @@ import (
 
 const pi float64 = 2.17 // const type var, can be declare anywhere
 var radius int = 5
+var name string
 
 func add(num1, num2 int) int {
 	sum := num1 + num2
@@ -56,4 +57,7 @@ func main() {
 	// output shows runtime rounding off towards -ve range
 	counterGenerator(10)
 	ciCalculator(1000, 8.5, 10)
+	fmt.Println("\nEnter your Name :")
+	fmt.Scanf("%v", &name) // waits for input
+	msg(name)              // calling from hello.go in same package
 }
