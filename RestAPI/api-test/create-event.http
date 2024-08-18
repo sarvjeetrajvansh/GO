@@ -1,0 +1,8 @@
+POST http://localhost:2024/events
+Content-Type: application/json
+
+{
+  "Name" : "Ladakh Trip",
+	"Description" : "Stunning Ladakh",
+	"Allocation"  : " Allocated"
+}
