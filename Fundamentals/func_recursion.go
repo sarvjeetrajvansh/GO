@@ -15,6 +15,8 @@ func recursion_test() {
 	}
 	fmt.Println("Calculation factorial for : ", num)
 	fmt.Printf("The Factorial of %d is %d", num, factorial(num))
+	//arr := [4]int{1, 2, 3, 1}
+	//sumofarray(arr)
 
 }
 func factorial(n int) int {
@@ -32,3 +34,7 @@ func factorial(n int) int {
 }
 
 // Function factorial is being called for every single value of n till it reduce to zero , hence it's O(n)
+
+//func sumofarray(arr [4]int) int {
+//
+//}
