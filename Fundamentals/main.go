@@ -23,4 +23,5 @@ func main() {
 	msg.Msg(input) // call function from msg package
 
 	arraySlice()
+	recursion_test()
 }
